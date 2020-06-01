@@ -8,7 +8,7 @@ body {
     max-width: 100%;
 }
 
-#centered {
+#firstContainer .centered {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -20,14 +20,41 @@ body {
     color: white;
 }
 
-#seco .col {
-    height: 100%;
-    margin: 5%;
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
 }
+
+.icn-round {
+    width: 50px;
+    border-radius: 200px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    background-color: #ccc;
+    border: 1.5px solid #fff;
+}
+
+.imgContainer {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#secondContainer .centered {
+    color: #fff;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 #thirdContainer {
     width: 100%;
     background-color: #F1E6E3;
     color: #552423;
+    margin-top: 5%;
 }
 
 

@@ -22,7 +22,7 @@ $(document).ready(function () {
         {owner: 'futterapp'},
         function (data) {
             var newRow = true;
-            var domStr = '<h2> Unsere Stars</h2>';
+            var domStr = '<div class="container"><h2> Unsere Stars</h2>';
             for (var idx in data) {
                 var tier = data[idx].jsonstring;
                 if (newRow) {
@@ -30,9 +30,12 @@ $(document).ready(function () {
                 }
                 domStr += '<div class="col-sm-6">';
                 domStr += '<div class="card">';
-                domStr += '<img class="card-img-top" src="https://elaspix.de/Lehre/VR/Aufgabe2/web_cloud_dev/pics/' + tier.imageurl + '" alt=' + tier.title + '/>';
+                domStr += '<div class="imgContainer">';
+                domStr += '<img class="img-fluid" src="https://elaspix.de/Lehre/VR/Aufgabe2/web_cloud_dev/pics/' + tier.imageurl + '" alt=' + tier.title + '/>';
+                domStr += '<h5 class="centered"> ' + tier.title + '</h5>';
+                domStr += '<img class="icn-round top-left" src="https://elaspix.de/Lehre/VR/Aufgabe2/web_cloud_dev/pics/' + getPicUrl(tier.futter, 1) + '" alt=' + tier.title + '/>';
+                domStr += '</div>';
                 domStr += '<div class="card-body">';
-                domStr += '<h5 class="card-title">' + tier.title + '</h5>';
                 domStr += '<p class="card-text">' + tier.text + '</p>';
                 domStr += '</div></div></div>';
                 if (!newRow) {
@@ -40,6 +43,7 @@ $(document).ready(function () {
                 }
                 newRow = !newRow;
             }
+            domStr += '</div>'
             console.log("Done");
             $("div#secondContainer").html(domStr);
         })
