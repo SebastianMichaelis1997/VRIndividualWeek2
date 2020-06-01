@@ -42,6 +42,5 @@ $(document).ready(function () {
             }
             console.log("Done");
             $("div#secondContainer").html(domStr);
-
         })
 })
