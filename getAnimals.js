@@ -17,14 +17,16 @@ function getPicUrl(futter, zweck) {
 }
 
 $(document).ready(function () {
-    console.log("Starting");
+
     $.getJSON("https://webtechlecture.appspot.com/cloudstore/listobjects",
         {owner: 'futterapp'},
         function (data) {
             var newRow = true;
+            var selectString = '<select name="animals" id="selectAnimal" class="custom-select">';
             var domStr = '<div class="container"><h2> Unsere Stars</h2>';
             for (var idx in data) {
                 var tier = data[idx].jsonstring;
+                selectString += '<option value="' + tier.title + '">' + tier.title + '</option>';
                 if (newRow) {
                     domStr += '<div class="row">';
                 }
@@ -43,8 +45,10 @@ $(document).ready(function () {
                 }
                 newRow = !newRow;
             }
+            selectString += '</select>';
             domStr += '</div>'
-            console.log("Done");
             $("div#secondContainer").html(domStr);
+            $("div#selectContainer").html(selectString);
+            alert('Sehr unfertige Seite, kein Form zum Eingeben der Zahlungsdaten, wenig funktionalität');
         })
 })

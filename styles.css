@@ -47,14 +47,34 @@ body {
     position: absolute;
     top: 80%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 #thirdContainer {
     width: 100%;
     background-color: #F1E6E3;
     color: #552423;
-    margin-top: 5%;
+}
+
+.btn-own{
+    border: 2px solid #552723;
+    color: #552723;
+    font-size: large;
+
+}
+
+.btn-select-img {
+    width: 75%;
+    height: 75%;
+    border: 2px solid #552723;
+    padding: 0;
+}
+.footer {
+    background-color: #EEEEEE;
+    color: #B2B2B2;
+}
+.linkImg {
+    height: 30px;
 }
 
 
