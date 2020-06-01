@@ -1,13 +1,11 @@
 body {
     font-family: Book Antiqua;
     color: #b88074;
-
 }
 
 #pinguin-image {
     width: 100%;
     max-width: 100%;
-    z-index: 1;
 }
 
 #centered {
@@ -15,16 +13,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
-.textOnCardImage {
-    color: white;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
 }
 
 #firstContainer {
@@ -32,7 +20,14 @@ body {
     color: white;
 }
 
-.col {
+#seco .col {
     height: 100%;
     margin: 5%;
 }
+#thirdContainer {
+    width: 100%;
+    background-color: #F1E6E3;
+    color: #552423;
+}
+
+

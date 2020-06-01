@@ -28,7 +28,7 @@ $(document).ready(function () {
                 if (newRow) {
                     domStr += '<div class="row">';
                 }
-                domStr += '<div class="col-6">';
+                domStr += '<div class="col-sm-6">';
                 domStr += '<div class="card">';
                 domStr += '<img class="card-img-top" src="https://elaspix.de/Lehre/VR/Aufgabe2/web_cloud_dev/pics/' + tier.imageurl + '" alt=' + tier.title + '/>';
                 domStr += '<div class="card-body">';
@@ -42,9 +42,6 @@ $(document).ready(function () {
             }
             console.log("Done");
             $("div#secondContainer").html(domStr);
-            // create new dom elements
+            /
         })
 })
-/*$(document).ready(function () {
-    alert("Hans");
-})*/
