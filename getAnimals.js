@@ -22,7 +22,6 @@ $(document).ready(function () {
         {owner: 'futterapp'},
         function (data) {
             var newRow = true;
-            var hans=1;
             var domStr = '<div class="container"><h2> Unsere Stars</h2>';
             for (var idx in data) {
                 var tier = data[idx].jsonstring;
